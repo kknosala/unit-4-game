@@ -5,36 +5,20 @@ var gameInfo = {
     losses: 0,
     //0 = purple, 1 = green, 2 = red, 3 = yellow
     pointValue: [],
+    currentPoints: 0,
+    targetValue: 0,
 
 }
 
 var gemInfo = {
     
-    purplePoints: gameInfo.pointValue[0],
-    greenPoints: gameInfo.pointValue[1],
-    redPoints: gameInfo.pointValue[2],
-    yellowPoints: gameInfo.pointValue[3],
+    purplePoints: 0,
+    greenPoints: 0,
+    redPoints: 0,
+    yellowPoints: 0,
 
 }
-// var gemPurple = {
-//     pointValue: 0,
-//     generatePointValue()
-// }
 
-// var gemGreen = {
-//     pointValue: 0,
-//     generatePointValue()
-// }
-
-// var gemRed = {
-//     pointValue: 0,
-//     generatePointValue()
-// }
-
-// var gemYellow = {
-//     pointValue: 0,
-//     generatePointValue()
-// }
 var gameLogic = {
 
     generatePointValue: function(){
@@ -42,22 +26,49 @@ var gameLogic = {
             var x = Math.floor((Math.random() * 12) + 1 );
             gameInfo.pointValue.push(x);
         }
+        gemInfo.purplePoints = gameInfo.pointValue[0];
+        gemInfo.greenPoints = gameInfo.pointValue[1];
+        gemInfo.redPoints = gameInfo.pointValue[2];
+        gemInfo.yellowPoints = gameInfo.pointValue[3];
+    },
+
+    generateTarget: function(){
+        var y = Math.floor((Math.random() * 101) + 19);
+        gameInfo.targetValue = y;
+    },
+
+    gameStart: function(){
+        this.generatePointValue();
+        this.generateTarget();
     },
 
     resetGame: function(){
         gemInfo.pointValue = [];
+        gemInfo.purplePoints = 0;
+        gemInfo.greenPoints = 0;
+        gemInfo.redPoints = 0;
+        gemInfo.yellowPoints = 0;
         gameLogic.generatePointValue();
+        gameLogic.generateTarget();
+    },
+
+    gameWin: function() {
+        gameInfo.wins++;
+        gameLogic.resetGame();
+    },
+
+    gameLoss: function(){
+        gameInfo.losses++;
+        gameLogic.resetGame();
     }
 }
 
-gameLogic.generatePointValue();
-//functions
-// function generatePointValue(){
-//     var x = Math.floor((Math.random() * 12) + 1 );
-//     this.pointValue = x;
+gameLogic.gameStart();
 
 
 console.log(gameInfo.pointValue);
+console.log('---');
+console.log(gameInfo.targetValue);
 console.log('---');
 console.log(gemInfo.purplePoints);
 console.log('---');
