@@ -1,0 +1,11 @@
+body {
+    font-family: 'Assistant', sans-serif;
+    background-image: url("../images/background.jpg");
+}
+h1 {
+    font-family: 'Lobster', cursive;
+}
+button {
+    background-color: transparent;
+    border: 0px;
+}
