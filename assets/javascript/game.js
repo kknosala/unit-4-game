@@ -7,7 +7,7 @@ var gameInfo = {
     pointValue: [],
     currentPoints: 0,
     targetValue: 0,
-
+    winText: 'Click the gems to see what they\'re worth!',
 }
 
 var gemInfo = {
@@ -37,9 +37,18 @@ var gameLogic = {
         gameInfo.targetValue = y;
     },
 
+    print: function(){
+        $('#current-points').text(gameInfo.currentPoints);
+        $('#target-score').text(gameInfo.targetValue);
+        $('#wins').text(gameInfo.wins);
+        $('#losses').text(gameInfo.losses);
+        $('#result-text').text(gameInfo.winText);
+    },
+
     gameStart: function(){
         this.generatePointValue();
         this.generateTarget();
+        this.print();
     },
 
     resetGame: function(){
@@ -48,21 +57,26 @@ var gameLogic = {
         gemInfo.greenPoints = 0;
         gemInfo.redPoints = 0;
         gemInfo.yellowPoints = 0;
+        gameInfo.currentPoints = 0;
         gameLogic.generatePointValue();
         gameLogic.generateTarget();
+        gameLogic.gameStart();
     },
 
     gameWin: function() {
         gameInfo.wins++;
-        alert('You Win!');
+        gameInfo.winText = 'You Won!';
+        this.print();
         gameLogic.resetGame();
     },
 
     gameLoss: function(){
         gameInfo.losses++;
-        alert('You Lose!');
+        gameInfo.winText = 'You lost!';
+        this.print();
         gameLogic.resetGame();
     }
+    
 }
 
 gameLogic.gameStart();
@@ -76,27 +90,22 @@ console.log('yellow value ', gemInfo.yellowPoints);
 $('.gembutton').on('click', function(){
     var color = this.value;
 
-    console.log(color);
     switch(color) {
         case 'purple':
-            alert('Purple');
             gameInfo.currentPoints = gameInfo.currentPoints + gemInfo.purplePoints;
             break;
         case 'green':
-            alert('Green');
             gameInfo.currentPoints = gameInfo.currentPoints + gemInfo.greenPoints;
             break;
         case 'red':
-            alert('Red');
             gameInfo.currentPoints = gameInfo.currentPoints + gemInfo.redPoints;
             break;
         case 'yellow':
-            alert('Yellow');
             gameInfo.currentPoints = gameInfo.currentPoints + gemInfo.yellowPoints;
             break;
     }
 
-    console.log(gameInfo.currentPoints);
+    gameLogic.print();
 
     if(gameInfo.currentPoints > gameInfo.targetValue) {
         gameLogic.gameLoss();
