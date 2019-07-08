@@ -1,4 +1,4 @@
-
+$(document).ready(function() {
 var gameInfo = {
 
     wins: 0,
@@ -54,26 +54,55 @@ var gameLogic = {
 
     gameWin: function() {
         gameInfo.wins++;
+        alert('You Win!');
         gameLogic.resetGame();
     },
 
     gameLoss: function(){
         gameInfo.losses++;
+        alert('You Lose!');
         gameLogic.resetGame();
     }
 }
 
 gameLogic.gameStart();
 
+console.log('target point ', gameInfo.targetValue);
+console.log('purple value ', gemInfo.purplePoints);
+console.log('green value ', gemInfo.greenPoints);
+console.log('red value', gemInfo.redPoints);
+console.log('yellow value ', gemInfo.yellowPoints);
 
-console.log(gameInfo.pointValue);
-console.log('---');
-console.log(gameInfo.targetValue);
-console.log('---');
-console.log(gemInfo.purplePoints);
-console.log('---');
-console.log(gemInfo.greenPoints);
-console.log('---');
-console.log(gemInfo.redPoints);
-console.log('---');
-console.log(gemInfo.yellowPoints);
+$('.gembutton').on('click', function(){
+    var color = this.value;
+
+    console.log(color);
+    switch(color) {
+        case 'purple':
+            alert('Purple');
+            gameInfo.currentPoints = gameInfo.currentPoints + gemInfo.purplePoints;
+            break;
+        case 'green':
+            alert('Green');
+            gameInfo.currentPoints = gameInfo.currentPoints + gemInfo.greenPoints;
+            break;
+        case 'red':
+            alert('Red');
+            gameInfo.currentPoints = gameInfo.currentPoints + gemInfo.redPoints;
+            break;
+        case 'yellow':
+            alert('Yellow');
+            gameInfo.currentPoints = gameInfo.currentPoints + gemInfo.yellowPoints;
+            break;
+    }
+
+    console.log(gameInfo.currentPoints);
+
+    if(gameInfo.currentPoints > gameInfo.targetValue) {
+        gameLogic.gameLoss();
+    }else if(gameInfo.currentPoints === gameInfo.targetValue) {
+        gameLogic.gameWin();
+    }
+})
+
+})
