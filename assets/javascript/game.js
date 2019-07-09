@@ -48,14 +48,12 @@ $(document).ready(function() {
     },
 
     resetGame: function() {
-      gemInfo.pointValue = [];
+      gameInfo.pointValue = [];
       gemInfo.purplePoints = 0;
       gemInfo.greenPoints = 0;
       gemInfo.redPoints = 0;
       gemInfo.yellowPoints = 0;
       gameInfo.currentPoints = 0;
-      gameLogic.generatePointValue();
-      gameLogic.generateTarget();
       gameLogic.gameStart();
     },
 
@@ -75,6 +73,7 @@ $(document).ready(function() {
   };
 
   gameLogic.gameStart();
+  console.log(gameInfo.pointValue);
 
   $(".gembutton").on("click", function() {
     var color = this.value;
