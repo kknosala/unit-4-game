@@ -28,45 +28,48 @@
   </head>
   <body>
     <div class="container">
-      <div class="row mt-4 justify-content-center">
-        <div class="col-5 text-center p-2 justify-content-center whitespace">
+      <div class="row mt-2 justify-content-center">
+        <div class="col-5 text-center text-white p-2 justify-content-center headerstyle">
           <h1>Crystal Collector Game</h1>
         </div>
       </div>
-      <div class="row mt-4 justify-content-center">
-        <div class="col-10 whitespace p-2">
-          <h2 class="ml-1 mr-1">Rules</h2>
+      <div class="row mt-2 justify-content-center">
+        <div class="col-10 rulestyle text-white p-2">
+          <h2 class="ml-1 mr-1"><b>Rules</b></h2>
           <p class="ml-1 mr-1">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, quasi
-            sed impedit autem tempore aperiam! Nisi eum aperiam provident quos
-            ducimus. Esse harum eaque provident culpa blanditiis debitis
-            voluptate dignissimos, accusamus suscipit nesciunt at illum quaerat
-            consequuntur fugiat perspiciatis repudiandae numquam reprehenderit
-            recusandae porro rem, sint minus! Rerum quidem eveniet dolore non
-            sunt illum sapiente illo, ex aliquam impedit reprehenderit soluta
-            suscipit accusantium deleniti provident nam labore nostrum neque
-            tempore dolorum. Illo quidem molestias animi tenetur dignissimos
-            delectus officiis itaque debitis eos numquam consequatur quas autem
-            amet hic laudantium natus aliquam ad ullam, pariatur, voluptates,
-            dolor beatae. Nisi, sed nulla.
+              You will be given a target number at the beginning of the game.
+          </p>
+          <p class="ml-1 mr-1">  
+              The crystal below will have a random number assigned to them. When you click on them, their number will be added to your total. The only way to see how much a crystal is worth is to check how much is added to your total.
+          </p>
+          <p class="ml-1 mr-1">
+              You must try to make your total match the target number. If you do, you win! If not, you lose.
+          </p>
+          <p class="ml-1 mr-1">
+              Either way, the game restarts with a new target number and new values for the crystals.
+          </p>
+          <p class="ml-1 mr-1">
+              Good Luck!
+            </p>
+              
           </p>
         </div>
       </div>
-      <div class="row mt-4 justify-content-center">
+      <div class="row mt-2 justify-content-center">
         <div class="col-10">
           <div class="row justify-content-between">
-            <div class="col-5 p-4 whitespace">
+            <div class="col-5 p-4 pointstyle text-white">
               <h3>Current Points: <span id="current-points"></span></h3>
               <h3>Target Score: <span id="target-score"></span></h3>
             </div>
-            <div class="col-5 p-4 whitespace">
+            <div class="col-5 p-4 winstyle text-white">
               <h3>Wins: <span id="wins"></span></h3>
               <h3>Losses: <span id="losses"></span></h3>
             </div>
           </div>
         </div>
       </div>
-      <div class="row mt-4 justify-content-center">
+      <div class="row mt-2 justify-content-center">
         <div class="col-10">
           <div class="row justify-content-between">
             <!--Gem images found on https://diablo.gamepedia.com/Gems-->
@@ -94,8 +97,8 @@
         </div>
       </div>
 
-      <div class="row mt-4 justify-content-center">
-        <div class="col-10 text-center whitespace p-3">
+      <div class="row mt-2 mb-2 justify-content-center">
+        <div class="col-10 text-center wintextstyle text-white p-3">
           <h3><span id="result-text"></span></h3>
         </div>
       </div>

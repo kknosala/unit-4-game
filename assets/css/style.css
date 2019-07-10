@@ -1,6 +1,9 @@
 body {
     font-family: 'Assistant', sans-serif;
-    background-image: url("../images/background.jpg"); /*found on https://www.toptal.com/designers/subtlepatterns/ */
+    background-image: url("../images/background2.jpg"); /*found at https://pixabay.com/illustrations/polygon-mining-abandoned-1980897/ */
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 h1 {
     font-family: 'Lobster', cursive;
@@ -8,9 +11,32 @@ h1 {
 h3 {
     font-size: 40px;
 }
+p {
+    font-size: 20px;
+}
 .whitespace {
     background-color: #fff;
     border: 1px #000 solid;
+}
+.headerstyle {
+    background-color: #e37222;
+    border: 4px #fff solid;
+}
+.rulestyle {
+    background-color: #07889b;
+    border: 4px #fff solid;
+}
+.pointstyle {
+    background-color: #66b9bf;
+    border: 4px #fff solid;
+}
+.winstyle {
+    background-color: #eeaa7b;
+    border: 4px #fff solid;
+}
+.wintextstyle {
+    background-color: #e37222;
+    border: 4px #fff solid;
 }
 .gembutton {
     background-color: transparent;
@@ -19,20 +45,20 @@ h3 {
 .purplegem {
     background-image: linear-gradient(#e1a2ff, #9000d0);
     border-radius: 50%;
-    border: 1px #444 solid;
+    border: 2px #fff solid;
 }
 .greengem {
     background-image: linear-gradient(#77f473, #288328);
     border-radius: 50%;
-    border: 1px #444 solid;
+    border: 2px #fff solid;
 }
 .redgem {
     background-image: linear-gradient(#f79390, #af0707);
     border-radius: 50%;
-    border: 1px #444 solid;
+    border: 2px #fff solid;
 }
 .yellowgem {
     background-image: linear-gradient(#f4c67f, #884c00);
     border-radius: 50%;
-    border: 1px #444 solid;
+    border: 2px #fff solid;
 }
