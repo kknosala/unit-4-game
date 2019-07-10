@@ -16,8 +16,11 @@
     <link rel="stylesheet" href="assets/css/style.css" />
 
     <!--Google Fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Assistant|Lobster&display=swap" rel="stylesheet">
-    
+    <link
+      href="https://fonts.googleapis.com/css?family=Assistant|Lobster&display=swap"
+      rel="stylesheet"
+    />
+
     <!--JQuery Javascript-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!--Personal Javascript-->
@@ -25,15 +28,15 @@
   </head>
   <body>
     <div class="container">
-      <div class="row">
-        <div class="col">
+      <div class="row mt-4 justify-content-center">
+        <div class="col-5 text-center p-2 justify-content-center whitespace">
           <h1>Crystal Collector Game</h1>
         </div>
       </div>
-      <div class="row">
-        <div class="col">
-          <h2>Rules</h2>
-          <p>
+      <div class="row mt-4 justify-content-center">
+        <div class="col-10 whitespace p-2">
+          <h2 class="ml-1 mr-1">Rules</h2>
+          <p class="ml-1 mr-1">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, quasi
             sed impedit autem tempore aperiam! Nisi eum aperiam provident quos
             ducimus. Esse harum eaque provident culpa blanditiis debitis
@@ -49,32 +52,50 @@
           </p>
         </div>
       </div>
-      <div class="row">
-        <div class="col-3">
-          <button class="gembutton" value="purple"><img src="assets/images/gem1.png" /></button>
-        </div>
-        <div class="col-3">
-            <button class="gembutton" value="green"><img src="assets/images/gem2.png" /></button>
-        </div>
-        <div class="col-3">
-            <button class="gembutton" value="red"><img src="assets/images/gem3.png" /></button>
-        </div>
-        <div class="col-3">
-            <button class="gembutton" value="yellow"><img src="assets/images/gem4.png" /></button>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <h3>Current Points: <span id="current-points"></span></h3>
-          <h3>Target Score: <span id="target-score"></span></h3>
-        </div>
-        <div class="col">
-          <h3>Wins: <span id="wins"></span></h3>
-          <h3>Losses: <span id="losses"></span></h3>
+      <div class="row mt-4 justify-content-center">
+        <div class="col-10">
+          <div class="row justify-content-between">
+            <div class="col-5 p-4 whitespace">
+              <h3>Current Points: <span id="current-points"></span></h3>
+              <h3>Target Score: <span id="target-score"></span></h3>
+            </div>
+            <div class="col-5 p-4 whitespace">
+              <h3>Wins: <span id="wins"></span></h3>
+              <h3>Losses: <span id="losses"></span></h3>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col">
+      <div class="row mt-4 justify-content-center">
+        <div class="col-10">
+          <div class="row justify-content-between">
+            <!--Gem images found on https://diablo.gamepedia.com/Gems-->
+            <div class="col-2 d-flex justify-content-center p-5 purplegem">
+              <button class="gembutton" value="purple">
+                <img src="assets/images/gem1.png" />
+              </button>
+            </div>
+            <div class="col-2 d-flex justify-content-center p-5 greengem">
+              <button class="gembutton" value="green">
+                <img src="assets/images/gem2.png" />
+              </button>
+            </div>
+            <div class="col-2 d-flex justify-content-center p-5 redgem">
+              <button class="gembutton" value="red">
+                <img src="assets/images/gem3.png" />
+              </button>
+            </div>
+            <div class="col-2 d-flex justify-content-center p-5 yellowgem">
+              <button class="gembutton" value="yellow">
+                <img src="assets/images/gem4.png" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-4 justify-content-center">
+        <div class="col-10 text-center whitespace p-3">
           <h3><span id="result-text"></span></h3>
         </div>
       </div>

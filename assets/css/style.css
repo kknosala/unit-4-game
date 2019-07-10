@@ -1,11 +1,38 @@
 body {
     font-family: 'Assistant', sans-serif;
-    background-image: url("../images/background.jpg");
+    background-image: url("../images/background.jpg"); /*found on https://www.toptal.com/designers/subtlepatterns/ */
 }
 h1 {
     font-family: 'Lobster', cursive;
 }
-button {
+h3 {
+    font-size: 40px;
+}
+.whitespace {
+    background-color: #fff;
+    border: 1px #000 solid;
+}
+.gembutton {
     background-color: transparent;
     border: 0px;
+}
+.purplegem {
+    background-image: linear-gradient(#e1a2ff, #9000d0);
+    border-radius: 50%;
+    border: 1px #444 solid;
+}
+.greengem {
+    background-image: linear-gradient(#77f473, #288328);
+    border-radius: 50%;
+    border: 1px #444 solid;
+}
+.redgem {
+    background-image: linear-gradient(#f79390, #af0707);
+    border-radius: 50%;
+    border: 1px #444 solid;
+}
+.yellowgem {
+    background-image: linear-gradient(#f4c67f, #884c00);
+    border-radius: 50%;
+    border: 1px #444 solid;
 }
